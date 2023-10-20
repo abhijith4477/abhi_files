@@ -1,0 +1,13 @@
+<div style="display:flex;flex-wrap:wrap;justify-content:flex-start;">
+    {% for product in products %}
+      <div class="card" style="width: 18rem; margin-right:20px;margin-bottom:20px;">
+        <img style="height:200px; width:180px;" class="card-img-top" src="{{ product.items_img.url }}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+
+        </div>
+      </div>
+    {% endfor %}
+</div>
+ <a href="{% url 'logout' %}"><button>Logout</button></a>
